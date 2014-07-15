@@ -1,7 +1,7 @@
 #enquireMQTest
 =============
+Demo: http://saratheneale.github.io/enquireMQTest/enquireTest.html
 
-traditional media queries vs enquire.js media queries
 
 I created this project to hone in on a problem with enquire.js (or something else, I have no idea).
 
