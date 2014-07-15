@@ -37,29 +37,24 @@
       setup: function() {},
       zooms: CatZoomHelper.meowZooms,
       match: function() {
-        console.log("Match: ");
         this.zoomIndex = this.zooms.indexOf(this.zoom);
         if (this.zoomIndex === -1) {
           this.zoomIndex = this.zooms[7];
           console.error('zoomIndex is off');
         }
-        console.log('zoom:' + this.zoom);
-        console.log('window height: ' + window.innerHeight);
-        $('img').css("height", (689 * this.zoom) + "px");
-        return console.log("End Match.");
+        console.log('MATCH: zoom' + this.zoom + 'window height: ' + window.innerHeight);
+        return $('img').css("height", (689 * this.zoom) + "px");
       },
       unmatch: function() {
-        console.log("Unmatch : ");
-        zoom;
+        unmatchZoom;
+        var unmatchZoom;
         if (this.zoom === this.MAX_ZOOM) {
-          zoom = this.zooms[this.zoomIndex + 1];
+          unmatchZoom = this.zooms[this.zoomIndex + 1];
         } else {
-          zoom = this.zooms[this.zoomIndex - 1];
+          unmatchZoom = this.zooms[this.zoomIndex - 1];
         }
-        $('img').css("height", (689 * zoom) + "px");
-        console.log("from zoom " + this.zoom + "TO " + zoom);
-        console.log('window height: ' + window.innerHeight);
-        return console.log("End Unmatch");
+        $('img').css("height", (689 * unmatchZoom) + "px");
+        return console.log("UNMATCH from zoom " + this.zoom + "TO " + unmatchZoom + 'window height: ' + window.innerHeight);
       }
     };
   };

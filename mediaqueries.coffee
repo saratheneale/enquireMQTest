@@ -67,35 +67,31 @@ handler = (zoom) ->
   zooms: CatZoomHelper.meowZooms
 
   match: ->
-    console.log "Match: "
+
     this.zoomIndex = this.zooms.indexOf(this.zoom)
     if this.zoomIndex is -1
       this.zoomIndex = this.zooms[7]
       console.error 'zoomIndex is off'
 
-    console.log 'zoom:' + this.zoom
-    console.log 'window height: ' + window.innerHeight
+    console.log 'MATCH: zoom' + this.zoom + 'window height: ' + window.innerHeight
 
     $('img').css("height",(689*this.zoom)+"px")
 
-    console.log "End Match."
 
   unmatch: ->
-    console.log "Unmatch : "
-    zoom;
+    unmatchZoom;
     if this.zoom is this.MAX_ZOOM
-      zoom = this.zooms[this.zoomIndex + 1]
+      unmatchZoom = this.zooms[this.zoomIndex + 1]
     else
-      zoom = this.zooms[this.zoomIndex - 1]
+      unmatchZoom = this.zooms[this.zoomIndex - 1]
 
-    $('img').css("height",(689*zoom)+"px")
+    $('img').css("height",(689*unmatchZoom)+"px")
 
-    console.log "from zoom " + this.zoom + "TO " + zoom
-    console.log 'window height: ' + window.innerHeight
-
-    console.log "End Unmatch"
+    console.log "UNMATCH from zoom " + this.zoom + "TO " + unmatchZoom + 'window height: ' + window.innerHeight
 
     #should we update zoom index? or this.zoom? or new rhis.unmatchedzoom?
+
+    #min-height has a similar issue.
 
 
 CatZoomHelper.registerMediaQueries(handler)
