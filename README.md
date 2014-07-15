@@ -19,7 +19,14 @@ I've made a traditonal Media Queries page that demonstrates that there's not a p
 
 ###More Background
 
-When the gap between media queries
+When the gap between media queries is larger, this doesn't happen. This tells me, it has to do with the speed that a user adjusts browser height.
+
+
+The console shows when a MQ is matched, unmatched, the zoom level, and the height of the browser.
+
+When the gap happens, you'll notice several unmatches fire all at the same browser height. The problem is that these queries should not be firing at that browser height.
+
+
 
 ##The Solution:
 
