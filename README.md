@@ -30,6 +30,11 @@ When the gap happens, you'll notice several unmatches fire all at the same brows
 
 ##The Solution:
 
-???
+More insights are welcome, but here's my current workaround.
 
-Halp!
+I was registering the media queries in the order from largest to smallest. I reveresed the order, and then the problem became a too large image when you shurnk the browser fast. (The unmatches were not getting called in the right order.) see http://saratheneale.github.io/enquireMQTest/attempt1.html
+
+Then I made each media query more specific AND got rid of the unmatch function completely (based on the philosophy that unmatch is used for cleanup not opposite of match). NOW my problem is solved. see http://saratheneale.github.io/enquireMQTest/solution.html
+
+This seems to be somewhat related to the mediaMatch API and the order that it executes things in. I don't entirely understand this issue and would welcome more documentation or discussion on it.
+
