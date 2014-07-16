@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ENQ Kitten Test</title>
+  <script type="text/javascript" src="jquery.js"></script>
+  <style type="text/css">
+
+  body{
+    margin:0;
+  }
+
+  footer{
+    background-color: gray;
+    height:50px;
+    position:fixed;
+    bottom:0;
+    width:100%;
+  }
+
+  .show{
+    display: none;
+  }
+@media screen and (min-height: 1220px){
+    .show{
+      display: block;
+    }
+  }
+  </style>
+</head>
+<body>
+<img src="http://placekitten.com/2200/689">
+
+<div class="show"> MAX PICTURE HEIGHT. THIS GAP IS EXPECTED.</div>
+
+
+<footer> If you increase the height of the window really fast, there's a large gap between me and the kitten see <a href="normalMQ.html">traditional media query experience</a></footer>
+
+<script type="text/javascript" src="homemadeMQ.js"></script>
+</body>
+</html>
